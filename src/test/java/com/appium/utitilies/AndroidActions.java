@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AndroidActions {
+public class AndroidActions  extends AppiumUtils{
 
 
     public static void longPressAction(AndroidDriver driver, WebElement ele)
@@ -47,8 +47,5 @@ public class AndroidActions {
 
     }
 
-    public  static Double getFormattedAmount(String amount){
-        Double price= Double.parseDouble(amount.substring(1));
-        return price;
-    }
+
 }

@@ -1,6 +1,7 @@
 package com.appium.AppPages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import java.util.List;
 public class CatalogPage  {
 
     AndroidDriver driver;
+
     public CatalogPage(AndroidDriver driver) {
         this.driver=driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);

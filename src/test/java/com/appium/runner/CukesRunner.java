@@ -7,13 +7,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
 
 @CucumberOptions(
         plugin = {"json:target/cucumber.json",
@@ -44,8 +39,6 @@ public class CukesRunner extends AbstractTestNGCucumberTests {
         public void before(){
 
             Driver.getDriver();
-
-
 
         }
 

@@ -20,7 +20,7 @@ public class Steps_US01  {
     @When("the user select {string}")
     public void the_user_select(String country) throws InterruptedException {
 
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         formPage.countryDropDown().click();
         AndroidActions.scrollDownUntil(Driver.getDriver(),country).click();
 
@@ -76,8 +76,8 @@ public class Steps_US01  {
 
         for (int i=0;i<shoppingCartPage.getAllProducts().size();i++){
             String actualShoesName=shoppingCartPage.getAllProducts().get(i).getText();
-            if (expectedShoesName.equalsIgnoreCase(actualShoesName)){
-                Assert.assertEquals(shoppingCartPage.getAllProducts().get(i).getText(),expectedShoesName);
+            if (shoesName.equalsIgnoreCase(actualShoesName)){
+                Assert.assertEquals(shoppingCartPage.getAllProducts().get(i).getText(),shoesName);
             }
         }
 
@@ -95,6 +95,7 @@ public class Steps_US01  {
     @Then("the user complete the purchase")
     public void the_user_complete_the_purchase() {
 
+        shoppingCartPage.getSendEmailCheckBox().click();
         shoppingCartPage.getPurchaseButton().click();
     }
 

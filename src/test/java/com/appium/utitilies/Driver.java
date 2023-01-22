@@ -19,7 +19,7 @@ public class Driver {
 
         UiAutomator2Options options= new UiAutomator2Options();
         options.setDeviceName(Config.getProperty("device"));
-        options.setApp(Config.getProperty("eCommerceApp"));
+        options.setApp(System.getProperty("user.dir")+Config.getProperty("eCommerceApp"));
         options.setChromedriverExecutable(Config.getProperty("chromeBrowser"));
 
     try{
