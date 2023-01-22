@@ -20,7 +20,7 @@ public class Driver {
         UiAutomator2Options options= new UiAutomator2Options();
         options.setDeviceName(Config.getProperty("device"));
         options.setApp(System.getProperty("user.dir")+Config.getProperty("eCommerceApp"));
-        options.setChromedriverExecutable(Config.getProperty("chromeBrowser"));
+        //options.setChromedriverExecutable(Config.getProperty("chromeBrowser"));
 
     try{
         driver= new AndroidDriver(new URL("http://0.0.0.0:4723"),options);
